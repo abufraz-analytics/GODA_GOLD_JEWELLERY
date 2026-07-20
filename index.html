@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Playfair Display', serif; }
+        .slide { animation: zoomFade 12s infinite; opacity: 0; background-size: cover; background-position: center; }
+        @keyframes zoomFade {
+            0% { opacity: 0; transform: scale(1); }
+            5% { opacity: 1; }
+            45% { opacity: 1; transform: scale(1.1); }
+            50% { opacity: 0; transform: scale(1.1); }
+            100% { opacity: 0; }
+        }
+    </style>
+    <title>Goda Gold</title>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full overflow-hidden">
+        <div class="absolute inset-0 w-full h-full">
+            <div class="slide absolute inset-0 w-full h-full" style="background-image: url('https://res.cloudinary.com/gz546ufv/image/upload/v1784546166/for_gooda_2_imo5qv.png');"></div>
+            <div class="slide absolute inset-0 w-full h-full" style="background-image: url('https://res.cloudinary.com/gz546ufv/image/upload/v1784544538/for_goda_1_ervzd9.png'); animation-delay: 6s;"></div>
+        </div>
+        <div class="relative z-10 w-full h-full flex flex-col justify-between p-10 bg-black/30">
+            <nav class="flex justify-between items-center text-white font-bold w-full">
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold tracking-widest">GODA</h1>
+                    <div class="flex items-center justify-center my-1">
+                        <div class="h-[1px] w-8 bg-white/50 mr-3"></div>
+                        <span class="text-sm uppercase tracking-[0.2em]">GOLD</span>
+                        <div class="h-[1px] w-8 bg-white/50 ml-3"></div>
+                    </div>
+                    <p class="text-xs tracking-[0.3em]">JEWELLERY FZCO</p>
+                </div>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-gray-300">Home</a>
+                    <a href="#" class="hover:text-gray-300">About Us</a>
+                    <a href="#" class="hover:text-gray-300">Collections</a>
+                </div>
+            </nav>
+            <div class="flex flex-col items-center justify-center flex-grow text-white">
+                <h1 class="text-5xl font-bold mb-4 text-center">GOLD EXCHANGE MANUFACTURING</h1>
+                <p class="text-xl mb-6">Crafting Excellence in Gold Jewellery</p>
+                <button class="px-6 py-2 border border-white hover:bg-white hover:text-black transition">CONTACT US</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Details Section -->
+    <section class="max-w-6xl mx-auto py-20 px-6">
+        <div class="text-center mb-10">
+            <span class="bg-gray-200 px-6 py-2 text-xl font-bold uppercase tracking-widest border border-gray-300">New 21K & 22K</span>
+            <h2 class="text-3xl font-bold mt-6">BULK GOLD JEWELLERY MANUFACTURING | 500G+ ORDERS | MAKING CHARGES ONLY</h2>
+            <p class="text-xl font-bold mt-2">GODA GOLD JEWELLERY FZCO</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold">HOW WE WORK: CRAFTING YOUR VISION</h3>
+                <p>At <strong>Goda Gold</strong>, we prioritize transparency. We craft your jewelry first so you can inspect the quality before any gold exchange.</p>
+                <p>Our team of <strong>highly experienced master artisans</strong> brings decades of precision to every piece. They are seasoned experts who transform raw gold into stunning masterpieces with unmatched attention to detail and artistic flair.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Orders:</strong> 500g+ custom orders.</li>
+                    <li><strong>Process:</strong> We craft, then weigh and test for purity.</li>
+                    <li><strong>Exchange:</strong> Gram-to-gram gold exchange based on final purity.</li>
+                    <li><strong>Settlement:</strong> Making charges via Cash or Cheque.</li>
+                </ul>
+            </div>
+            <img src="https://res.cloudinary.com/gz546ufv/image/upload/v1784556843/for_goda_3_dbiuoz.png" 
+                 alt="Gold Bangles" 
+                 class="w-full rounded-lg border-4 border-gray-200 cursor-pointer transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <img src="https://res.cloudinary.com/gz546ufv/image/upload/v1784558552/for_goda_4_mzsj5d.png" alt="FAQ Image" class="w-full rounded-lg border-4 border-gray-200 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+            <div class="space-y-4">
+                <h2 class="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+                
+                <div class="border border-gray-300">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 bg-gray-100 font-bold flex justify-between hover:bg-gray-200 transition">+ Do you accept orders below 500 grams?</button>
+                    <div class="hidden p-4 bg-white border-t text-gray-700">Sorry, we only accept bulk orders of 500 grams and above.</div>
+                </div>
+
+                <div class="border border-gray-300">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 bg-gray-100 font-bold flex justify-between hover:bg-gray-200 transition">+ Do I need to provide gold with my order?</button>
+                    <div class="hidden p-4 bg-white border-t text-gray-700">You can provide raw gold at the time of order. Alternatively, you can provide the equivalent weight and purity of gold once your jewelry piece is ready.</div>
+                </div>
+
+                <div class="border border-gray-300">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 bg-gray-100 font-bold flex justify-between hover:bg-gray-200 transition">+ Can I get jewelry without exchanging gold?</button>
+                    <div class="hidden p-4 bg-white border-t text-gray-700">Sorry, we do not sell gold. We operate on a gold-for-gold exchange basis; you only need to pay the manufacturing (making) charges.</div>
+                </div>
+
+                <div class="border border-gray-300">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 bg-gray-100 font-bold flex justify-between hover:bg-gray-200 transition">+ Where is your office located?</button>
+                    <div class="hidden p-4 bg-white border-t text-gray-700">We are located at Gold & Diamond Park, Sheikh Zayed Road, Al Quoz Industrial Area 3, Dubai.</div>
+                </div>
+
+                <div class="border border-gray-300">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 bg-gray-100 font-bold flex justify-between hover:bg-gray-200 transition">+ How long does it take to complete an order?</button>
+                    <div class="hidden p-4 bg-white border-t text-gray-700">The completion time depends on the design complexity and weight of the jewelry. Once you finalize your design, our team will provide you with a specific timeline, ensuring your masterpiece is crafted with precision and delivered promptly.</div>
+                </div>
+
+
+                <div class="border border-gray-300">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 bg-gray-100 font-bold flex justify-between hover:bg-gray-200 transition">+ How can I place an order?</button>
+                    <div class="hidden p-4 bg-white border-t text-gray-700">To place an order, please click on the 'CONTACT US' button and send us a message. Our team will handle the rest. For more information, visit the 'CONTACT US' section.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Column Info Section (Bottom) -->
+    <section class="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 shadow-lg text-center hover:shadow-2xl transition"><h3 class="text-xl font-bold mb-4">About Us</h3><p class="text-gray-600">More than 10 years experience in gold jewelry, in the heart of the market.</p></div>
+        <div class="bg-white p-8 shadow-lg text-center hover:shadow-2xl transition"><h3 class="text-xl font-bold mb-4">Gold Purity</h3><p class="text-gray-600">All items sold are government-certified and purity-checked for your complete peace of mind.</p></div>
+        <div class="bg-white p-8 shadow-lg text-center hover:shadow-2xl transition"><h3 class="text-xl font-bold mb-4">Collections</h3><p class="text-gray-600">Explore our exclusive 22K and 24K gold designs crafted with timeless artistry.</p></div>
+    </section>
+
+    <script>
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            content.classList.toggle('hidden');
+            btn.textContent = content.classList.contains('hidden') ? btn.textContent.replace('-', '+') : btn.textContent.replace('+', '-');
+        }
+    </script>
+</body>
+</html>
