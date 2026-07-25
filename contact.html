@@ -9,10 +9,10 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts for Brand Styling -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .brand-font {
-            font-family: 'Cinzel', serif;
+        body {
+            font-family: 'Playfair Display', serif;
         }
         .glow-effect {
             transition: all 0.4s ease-in-out;
@@ -23,7 +23,7 @@
         }
     </style>
 </head>
-<body class="bg-white text-slate-800 font-sans">
+<body class="bg-white text-slate-800">
 
     <!-- Header / Navbar -->
     <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50">
@@ -31,36 +31,38 @@
             
             <!-- Brand Logo -->
             <a href="index.html" class="flex flex-col items-start leading-tight">
-                <span class="text-xl md:text-2xl font-bold tracking-[0.2em] brand-font">GODA</span>
+                <span class="text-xl md:text-2xl font-bold tracking-[0.2em]">GODA</span>
                 <div class="flex items-center w-full my-0.5">
                     <div class="flex-grow border-t border-amber-400/60"></div>
-                    <span class="px-2 text-[10px] md:text-xs tracking-[0.25em] text-amber-300 font-semibold brand-font">GOLD</span>
+                    <span class="px-2 text-[10px] md:text-xs tracking-[0.25em] text-amber-300 font-semibold">GOLD</span>
                     <div class="flex-grow border-t border-amber-400/60"></div>
                 </div>
-                <span class="text-[9px] md:text-[10px] tracking-[0.15em] text-slate-300 uppercase brand-font">JEWELLERY FZCO</span>
+                <span class="text-[9px] md:text-[10px] tracking-[0.15em] text-slate-300 uppercase">JEWELLERY FZCO</span>
             </a>
 
-            <!-- Navigation Links with Dropdown for Collections -->
+            <!-- Navigation Links -->
             <nav class="flex items-center space-x-6 md:space-x-8 text-sm md:text-base font-medium">
                 <a href="index.html" class="hover:text-amber-400 transition">Home</a>
                 <a href="About Us.html" class="hover:text-amber-400 transition">About Us</a>
                 
-                <!-- Collections Dropdown -->
-                <div class="relative group">
-                    <button class="flex items-center space-x-1 text-amber-400 font-semibold focus:outline-none py-2">
+                <!-- Collections Dropdown with Mobile Tap & Desktop Hover Support -->
+                <div class="relative py-2" id="dropdown-container">
+                    <button id="dropdown-btn" class="flex items-center space-x-1 hover:text-amber-400 transition font-medium focus:outline-none cursor-pointer">
                         <span>Collections</span>
-                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                        <i id="dropdown-icon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
                     </button>
                     <!-- Dropdown Menu -->
-                    <div class="absolute right-0 mt-0 w-48 bg-slate-900 border border-slate-800 rounded-xl shadow-xl py-2 hidden group-hover:block transition-all z-50">
-                        <a href="bangles.html" class="block px-4 py-2 text-sm text-amber-400 bg-slate-800/50 font-semibold">Bangles</a>
-                        <a href="earrings.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-amber-400 transition">Earrings</a>
-                        <a href="necklaces.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-amber-400 transition">Necklaces</a>
-                        <a href="rings.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-amber-400 transition">Rings</a>
+                    <div id="dropdown-menu" class="absolute right-0 pt-2 w-48 hidden transition-all z-50">
+                        <div class="bg-slate-900 border border-slate-800 rounded-xl shadow-xl py-2">
+                            <a href="bangles.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-amber-400 transition">Bangles</a>
+                            <a href="earrings.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-amber-400 transition">Earrings</a>
+                            <a href="necklaces.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-amber-400 transition">Necklaces</a>
+                            <a href="rings.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-amber-400 transition">Rings</a>
+                        </div>
                     </div>
                 </div>
 
-                <a href="contact.html" class="hover:text-amber-400 transition">Contact Us</a>
+                <a href="contact.html" class="text-amber-400 font-semibold transition">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -73,7 +75,7 @@
             
             <!-- Left: Formspree Contact Form -->
             <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-3 brand-font">Send Us a Message</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-3">Send Us a Message</h2>
                 
                 <form action="https://formspree.io/f/xvzjdnpv" method="POST" class="space-y-4">
                     <div>
@@ -96,7 +98,7 @@
                         <textarea name="message" rows="3" required class="w-full px-4 py-2.5 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 text-sm" placeholder="Type your query or requirements here..."></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-slate-900 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-md text-sm tracking-wide">
+                    <button type="submit" class="w-full bg-slate-900 hover:bg-amber-600 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-md text-sm tracking-wide cursor-pointer">
                         Send Message
                     </button>
                 </form>
@@ -124,7 +126,7 @@
             <!-- Right: Store & Location Details -->
             <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between order-1 md:order-2 h-full">
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-3 brand-font">Store & Location Details</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-3">Store & Location Details</h2>
                     
                     <div class="mb-6">
                         <h3 class="font-semibold text-amber-700 text-lg mb-2 flex items-center">
@@ -170,10 +172,10 @@
 
     </main>
 
-    <!-- Bottom Note Section (Replacing the orange banner) -->
+    <!-- Bottom Note Section -->
     <section class="max-w-7xl mx-auto px-6 pb-8 text-center">
         <div class="bg-slate-50 border border-slate-200 rounded-2xl py-6 px-4">
-            <h3 class="text-lg font-semibold text-slate-800 brand-font">Get In Touch With Us</h3>
+            <h3 class="text-lg font-semibold text-slate-800">Get In Touch With Us</h3>
             <p class="mt-1 text-slate-600 text-sm">We would love to hear from you. Visit our store or drop a message above.</p>
         </div>
     </section>
@@ -182,6 +184,45 @@
     <footer class="bg-slate-900 text-white text-center py-6 text-sm border-t border-slate-800">
         <p>&copy; 2026 Goda Gold Jewellery FZCO. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Mobile & Desktop Dropdown Toggle -->
+    <script>
+        const dropdownContainer = document.getElementById('dropdown-container');
+        const dropdownBtn = document.getElementById('dropdown-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const dropdownIcon = document.getElementById('dropdown-icon');
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = !dropdownMenu.classList.contains('hidden');
+            if (isOpen) {
+                dropdownMenu.classList.add('hidden');
+                dropdownIcon.classList.remove('rotate-180');
+            } else {
+                dropdownMenu.classList.remove('hidden');
+                dropdownIcon.classList.add('rotate-180');
+            }
+        });
+
+        dropdownContainer.addEventListener('mouseenter', () => {
+            if (window.innerWidth >= 768) {
+                dropdownMenu.classList.remove('hidden');
+                dropdownIcon.classList.add('rotate-180');
+            }
+        });
+
+        dropdownContainer.addEventListener('mouseleave', () => {
+            if (window.innerWidth >= 768) {
+                dropdownMenu.classList.add('hidden');
+                dropdownIcon.classList.remove('rotate-180');
+            }
+        });
+
+        window.addEventListener('click', () => {
+            dropdownMenu.classList.add('hidden');
+            dropdownIcon.classList.remove('rotate-180');
+        });
+    </script>
 
 </body>
 </html>
